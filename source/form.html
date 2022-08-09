@@ -42,16 +42,16 @@
 
     <main class="main-container">
 
-      <h1 class="catalog__title">Подбор программы</h1>
+      <h1 class="form-title">Подбор программы</h1>
       <p class="">Заполните анкету, и мы подберём программу питания для вашего кота</p>
 
       <!-- Form -->
       <section class="order-form">
         <h2 class="visually-hidden">Форма для подбора питания</h2>
-        <form class="customer-form" method="post" action="https://echo.htmlacademy.ru">
+        <form class="customer-order-form" method="post" action="https://echo.htmlacademy.ru">
 
           <!-- Cat`s data -->
-          <fieldset class="customer-form__form-data">
+          <fieldset class="customer-form form-data">
             <ul class="form-data__list">
               <li class="form-data__item">
                 <label class="form-data__label">
@@ -76,29 +76,29 @@
           </fieldset>
 
           <!-- Cat`s programm -->
-          <fieldset class="customer-form__selection">
-            <ul class="selection__list selection__radio">
-              <li class="selection__item">
-                <label class="selection__label radio">
-                  <input class="visually-hidden selection__input" type="radio" name="programm-type" value="Weight-loss"
+          <fieldset class="customer-form programm-selection">
+            <ul class="programm-selection__list programm-selection__radio">
+              <li class="programm-selection__item">
+                <label class="programm-selection__label radio">
+                  <input class="visually-hidden programm-selection__input" type="radio" name="programm-type" value="Weight-loss"
                     checked>
-                  <span class="selection__icon icon--radio"></span>
-                  <span class="selection__name">Похудение</span>
+                  <span class="programm-selection__icon programm-selection__icon--radio"></span>
+                  <span class="programm-selection__name">Похудение</span>
                 </label>
               </li>
-              <li class="customer-filter-item">
-                <label class="selection__label radio">
-                  <input class="visually-hidden selection__input" type="radio" name="programm-type" value="Weight-gain">
-                  <span class="selection__icon icon--radio"></span>
-                  <span class="selection__name">Набор массы</span>
+              <li class="programm-selection__item">
+                <label class="programm-selection__label radio">
+                  <input class="visually-hidden programm-selection__input" type="radio" name="programm-type" value="Weight-gain">
+                  <span class="programm-selection__icon programm-selection__icon--radio"></span>
+                  <span class="programm-selection__name">Набор массы</span>
                 </label>
               </li>
-              <li class="customer-filter-item">
-                <label class="selection__label radio">
+              <li class="programm-selection__item">
+                <label class="programm-selection__label radio">
                   <input class="visually-hidden programm-selection__input" type="radio" name="programm-type"
                     value="Need-help">
-                  <span class="selection__icon icon--radio"></span>
-                  <span class="selection__name">Не знаю (нужен ваш совет)</span>
+                  <span class="programm-selection__icon programm-selection__icon--radio"></span>
+                  <span class="programm-selection__name">Не знаю (нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -106,76 +106,76 @@
 
           <!-- Cat`s owner contacts -->
 
-          <fieldset class="customer-form__customer-contacts">
+          <fieldset class="customer-form customer-contacts">
             <legend class="customer-form__title">Контактные данные (владельца кота)</legend>
-            <ul class="form-data__list">
-              <li class="form-data__item">
-                <label class="form-data__label">
-                  <span class="form-data__name">E-mail:*</span>
-                  <input class="form-data__input" type="text" name="e-mail" value="kuklachev@gmail.com"
+            <ul class="customer-contacts__list">
+              <li class="customer-contacts__item">
+                <label class="customer-contacts__label">
+                  <span class="customer-contacts__name">E-mail:*</span>
+                  <input class="customer-contacts__input" type="text" name="e-mail" value="kuklachev@gmail.com"
                     placeholder="kuklachev@gmail.com" required>
-                  <span class="form-data__icon icon--email"></span>
+                  <span class="customer-contacts__icon icon--email"></span>
                 </label>
               </li>
-              <li class="form-data__item">
-                <label class="form-data__label">
-                  <span class="form-data__name">Телефон:*</span>
-                  <input class="form-data__input" type="text" name="e-mail" value="8 (960) 900-60-90"
+              <li class="customer-contacts__item">
+                <label class="customer-contacts__label">
+                  <span class="customer-contacts__name">Телефон:*</span>
+                  <input class="customer-contacts__input" type="text" name="e-mail" value="8 (960) 900-60-90"
                     placeholder="8 (960) 900-60-90" required>
-                  <span class="form-data__icon icon--phone"></span>
+                  <span class="fcustomer-contacts__icon icon--phone"></span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
           <!-- Order`s comments -->
-          <fieldset class="customer-form__customer-contacts">
+          <fieldset class="customer-form customer-comments">
             <legend class="customer-form__title">Комментарий</legend>
-            <textarea class="customer-form-comment" name="customer-form-comment"
+            <textarea class="customer-form__comment" name="customer-form-comment"
               placeholder="Раccкажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <!-- Additional goods -->
 
-          <fieldset class="customer-form__selection">
+          <fieldset class="customer-form additional-selection">
             <legend class="customer-form__title">Дополнительно</legend>
 
-            <ul class="selection__list selection__checkbox">
-              <li class="selection__item">
-                <label class="selection__label checkbox">
-                  <input class="visually-hidden selection__input" type="checkbox" name="sweetener" value="sweetener"
+            <ul class="additional-selection__list additional-selection__checkbox">
+              <li class="additional-selection__item">
+                <label class="additional-selection__label checkbox">
+                  <input class="visually-hidden additional-selection__input" type="checkbox" name="sweetener" value="sweetener"
                     checked>
-                  <span class="selection__icon icon--checkbox"></span>
-                  <span class="selection__name">Сахарозаменитель</span>
+                  <span class="additional-selection__icon icon--checkbox"></span>
+                  <span class="additional-selection__name">Сахарозаменитель</span>
                 </label>
               </li>
-              <li class="selection__item">
-                <label class="selection__label checkbox">
-                  <input class="visually-hidden selection__input" type="checkbox" name="water" value="water">
-                  <span class="selection__icon icon--checkbox"></span>
-                  <span class="selection__name">Питьевая вода</span>
+              <li class="additional-selection__item">
+                <label class="additional-selection__label checkbox">
+                  <input class="visually-hidden additional-selection__input" type="checkbox" name="water" value="water">
+                  <span class="additional-selection__icon icon--checkbox"></span>
+                  <span class="additional-selection__name">Питьевая вода</span>
                 </label>
               </li>
-              <li class="selection__item">
-                <label class="selection__label checkbox">
-                  <input class="visually-hidden selection__input" type="checkbox" name="milk" value="milk">
-                  <span class="selection__icon icon--checkbox"></span>
-                  <span class="selection__name">Молоко</span>
+              <li class="additional-selection__item">
+                <label class="additional-selection__label checkbox">
+                  <input class="visually-hidden additional-selection__input" type="checkbox" name="milk" value="milk">
+                  <span class="additional-selection__icon icon--checkbox"></span>
+                  <span class="additional-selection__name">Молоко</span>
                 </label>
               </li>
-              <li class="selection__item">
-                <label class="selection__label checkbox">
-                  <input class="visually-hidden selection__input" type="checkbox" name="vitamins" value="vitamins">
-                  <span class="selection__icon icon--checkbox"></span>
-                  <span class="selection__name">Витамины</span>
+              <li class="additional-selection__item">
+                <label class="additional-selection__label checkbox">
+                  <input class="visually-hidden additional-selection__input" type="checkbox" name="vitamins" value="vitamins">
+                  <span class="additional-selection__icon icon--checkbox"></span>
+                  <span class="additional-selection__name">Витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
   <!-- Submit button -->
-              <div class="customer-form__submit-wrapper">
-                <button type="submit" class="button customer-form__submit-button">Отправить заявку</button>
+              <div class="customer-form-submit">
+                <button type="submit" class="button customer-form-submit__button">Отправить заявку</button>
                 <p class="required-field">* — Обязательные поля</p>
               </div>
 
