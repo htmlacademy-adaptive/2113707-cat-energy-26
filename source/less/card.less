@@ -3,17 +3,14 @@
   padding-top: 19px;
 }
 
-.card__link {
-  font-size: 16px;
-  color: @special-text-color-v2;
-  text-transform: uppercase;
-}
-
 .card__picture-wrapper {
   width: 50%;
   display: flex;
   justify-content: center;
-  // margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .card__product-wrapper {
@@ -22,12 +19,36 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
+.card__link {
+  font-size: 16px;
+  font-weight: 400;
+  color: @special-text-color-v2;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .card__title {
+  font-size: 16px;
   margin: 0;
-  max-width: 76px;
+  width: 76px;
   margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 140px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 21px;
+  }
 }
 
 .card__key {
@@ -35,6 +56,10 @@
   font-size: 12px;
   font-weight: 16px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .card__value {
@@ -42,6 +67,11 @@
   font-size: 12px;
   font-weight: 16px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    text-align: right;
+  }
 }
 
 .card__button {

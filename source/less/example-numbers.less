@@ -3,7 +3,18 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 11px;
+  margin: 0 auto 11px;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
+    padding: 0;
+  }
 }
 
 .example-numbers__content {
@@ -14,6 +25,24 @@
   margin-bottom: 9px;
   text-align: center;
   text-transform: uppercase;
+  width: 124px;
+  min-height: 56px;
+  padding-top: 14px;
+  border: 1px solid @border-color-input;
+  border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    width: 162px;
+    min-height: 77px;
+  }
+}
+
+.example-numbers__item:not(:last-child) {
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
 }
 
 .example-numbers__description {
@@ -21,5 +50,23 @@
   font-size: 12px;
   line-height: 12px;
   text-align: center;
-  margin: 0;
+  margin: -20px auto 0;
+  width: 87px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: @background-letters-color;
+
+  @media (min-width: @tablet-width) {
+    min-width: 145px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: -16px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: @secondary-background-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @background-letters-color;
+  }
 }

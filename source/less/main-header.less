@@ -1,14 +1,58 @@
+.main-header--index::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background-image: url("../img/main-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @basic-bg-element-color;
+  background-size: cover;
+  min-height: 302px;
+  width: 100%;
+  min-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 50%;
+    min-height: 694px;
+    top: 0;
+    right: 0;
+    left: inherit;
+    background-image:
+      linear-gradient(rgba(@basic-bg-element-color, 0.85), rgba(@basic-bg-element-color, 0.85)),
+      url("../img/index-background-desktop.jpg");
+    z-index: -1;
+  }
+}
+
 .main-header__toggle {
   width: 24px;
   height: 24px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-header__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 24px 0 24px;
+  flex-direction: column;
+  padding-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding-top: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 59px;
+  }
 }
 
 .main-header-logo-togler__wrapper {
@@ -16,4 +60,9 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
