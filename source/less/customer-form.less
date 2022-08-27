@@ -2,5 +2,22 @@
   font-size: 24px;
   line-height: 26px;
   color: @secondary-text-color;
+  margin: 0;
+  padding: 0;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+  }
+}
+
+.customer-form__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 69px;
+  }
 }

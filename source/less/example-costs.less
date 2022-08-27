@@ -4,6 +4,17 @@
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 330px;
+    justify-content: space-between;
+  }
 }
 
 .example-costs__description,
@@ -12,4 +23,9 @@
   color: @secondary-text-color;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

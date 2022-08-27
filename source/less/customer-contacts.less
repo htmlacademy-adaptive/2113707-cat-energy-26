@@ -2,16 +2,34 @@
   border: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 66px;
+  }
 }
 
 .customer-contacts__list {
   display: flex;
   flex-direction: column;
-  margin-bottom: 24px;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.customer-contacts__item {
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
 }
 
 .customer-contacts__item:not(:last-child) {
   margin-bottom: 13px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 78px;
+  }
 }
 
 .customer-contacts__label {
@@ -25,6 +43,11 @@
   line-height: 18px;
   text-transform: uppercase;
   margin-right: 12px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .customer-contacts__input {
@@ -34,5 +57,11 @@
   text-transform: uppercase;
   padding: 13px 15px 13px;
   border: 1px solid @border-color-main;
-  width: 100%;
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 21px;
+  }
 }

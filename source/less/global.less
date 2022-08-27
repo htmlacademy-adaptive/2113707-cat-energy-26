@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .reset-list {
   margin: 0;
   padding: 0;
@@ -20,23 +26,23 @@
 .container {
   position: relative;
   display: block;
-  max-width: 100%;
-  // margin-left: auto;
-  // margin-right: auto;
+  width: 320px;
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .container {
-    max-width: 100%;
+    width: 768px;
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 1440px) {
   .container {
+    width: 1440px;
     padding-left: 110px;
     padding-right: 110px;
   }
@@ -52,5 +58,16 @@ img {
 }
 
 .google-map {
-  width: 100%;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1440px;
+    margin: 0 auto;
+  }
 }

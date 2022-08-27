@@ -1,12 +1,38 @@
+.catalog-cards {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
 .catalog-cards__list {
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .catalog-cards__item {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    min-height: 430px;
+    background-color: @background-letters-color;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    padding: 0 38px 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    min-height: 430px;
+    padding: 0 38px 39px;
+  }
 }

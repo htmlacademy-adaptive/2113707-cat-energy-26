@@ -1,5 +1,21 @@
+.additional {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .additional__wrapper {
-  display: flex;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 895px;
+  }
 }
 
 .additional__title {
@@ -9,15 +25,62 @@
   color: @secondary-text-color;
   margin: 0;
   margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .additional__subtitle {
   margin: 0;
   margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .additional__card {
   padding: 13px 0 19px;
+  margin-top: -1px;
+  border-bottom: 1px solid @border-color-input;
+  border-top: 1px solid @border-color-input;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: -1px;
+    padding: 26px 38px 28px;
+    border: 1px solid @border-color-input;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 0 17px;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.additional__item {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.additional_content-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .additional__content {
@@ -25,6 +88,11 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
+
+  @media (min-width: @desktop-width) {
+    align-items: center;
+    margin: 0;
+  }
 }
 
 .additional__link {
@@ -33,22 +101,54 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @special-text-color-v2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional__quantity {
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 114px;
+    width: 150px;
+  }
 }
 
 .additional__price {
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 100px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 44px;
+  }
 }
 
 .additional__button {
   font-size: 16px;
+  min-height: 40px;
+
+  @media (min-width: @desktop-width) {
+    max-width: 244px;
+    margin-left: 38px;
+  }
 }
 
 .additional__gift {
@@ -63,10 +163,31 @@
   background-size: cover;
   min-height: 290px;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 71px 124px 69px 88px;
+    min-height: 200px;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    width: 245px;
+    margin: 0;
+    padding: 56px 0 42px 0;
+    height: 288px;
+    margin-left: 80px;
+  }
 }
 
 .additional__gift-pic-wrapper {
   margin-bottom: 48px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .additional__gift-text {
@@ -76,4 +197,12 @@
   color: @special-text-color-v3;
   text-align: center;
   width: 160px;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
 }
