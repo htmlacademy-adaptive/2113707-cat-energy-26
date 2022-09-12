@@ -9,7 +9,6 @@
   background-size: cover;
   min-height: 302px;
   width: 100%;
-  min-width: 320px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -30,11 +29,59 @@
 }
 
 .main-header__toggle {
+  position: relative;
+  top: 4px;
   width: 24px;
   height: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.main-header__toggle--open::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-header__toggle--close {
+  position: relative;
+  top: 0;
+  right: auto;
+  left: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#000000, 30%);
   }
 }
 
@@ -43,26 +90,42 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 24px;
+  padding-top: 10px;
+  width: 320px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    padding-top: 32px;
+    padding-top: 24px;
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 59px;
+    justify-content: space-between;
+    width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 54px;
   }
 }
 
-.main-header-logo-togler__wrapper {
+.main-header__toggler-wrapper {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 17px;
+  width: 320px;
+  padding: 0 20px 17px 20px;
+  border-bottom: 1px solid rgba(230, 230, 230, 1);
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    border-bottom: none;
   }
+}
+
+// Отключение кнопки без JS
+.main-header__nojs-btn {
+  display: none;
 }

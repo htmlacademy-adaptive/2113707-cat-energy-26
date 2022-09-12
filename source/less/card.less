@@ -1,16 +1,16 @@
 .card {
-  padding-bottom: 25px;
-  padding-top: 19px;
+  position: relative;
+  padding: 20px 20px 25px 20px;
+
+  @media (max-width: 767px) {
+    border-top: 1px solid rgba(235, 235, 235, 1);
+  }
 }
 
 .card__picture-wrapper {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-  }
+  position: absolute;
+  top: -5px;
+  left: 5px;
 }
 
 .card__product-wrapper {
@@ -35,23 +35,47 @@
     font-size: 20px;
     line-height: 24px;
   }
+
+  @media (min-width: @tablet-width) {
+    line-height: 21px;
+  }
 }
 
 .card__title {
   font-size: 16px;
   margin: 0;
   width: 76px;
-  margin-bottom: 14px;
+  margin-bottom: 9px;
 
   @media (min-width: @tablet-width) {
     min-width: 140px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 18px;
     margin-bottom: 21px;
   }
 }
 
+.card__raw {
+  margin-left: -1px;
+  margin-right: -2px;
+  display: flex;
+  justify-content: space-between;
+  height: 16px;
+
+  @media (min-width: @tablet-width) {
+    height: 25px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid rgba(205, 205, 205, 1);
+  }
+}
+
 .card__key {
+  align-items: flex-end;
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 12px;
   font-weight: 16px;

@@ -12,10 +12,10 @@
 .example-slider::after {
   @media (min-width: @tablet-width) {
     content: "";
-    bottom: 0;
+    bottom: -206px;
     left: -244px;
     position: absolute;
-    height: 462px;
+    height: 464px;
     width: 768px;
     background-color: @bg-cat-color;
   }
@@ -23,14 +23,16 @@
   @media (min-width: @desktop-width) {
     background-color: @background-letters-color;
     left: -312px;
-    bottom: -303px;
-    height: 549px;
+    bottom: -217px;
+    height: 463px;
     width: 899px;
   }
 }
 
 .example-slider__pictures {
   position: relative;
+  top: 2px;
+  left: -3px;
 }
 
 .example-slider__before-cat {
