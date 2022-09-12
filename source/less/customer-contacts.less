@@ -1,8 +1,13 @@
 .customer-contacts {
   border: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 24px;
+
+  @media (max-width: 767px) {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    margin-bottom: 9px;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 66px;
@@ -27,12 +32,17 @@
 .customer-contacts__item:not(:last-child) {
   margin-bottom: 13px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 18px;
+  }
+
   @media (min-width: @desktop-width) {
     margin-right: 78px;
   }
 }
 
 .customer-contacts__label {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -47,6 +57,13 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-right: 20px;
+  }
+}
+
+.customer-contacts__name--phone {
+  @media (min-width: @tablet-width) {
+    margin-right: 13px;
   }
 }
 
@@ -55,7 +72,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  padding: 13px 15px 13px;
+  padding: 13px 13px 13px;
   border: 1px solid @border-color-main;
   flex-grow: 1;
 
@@ -63,5 +80,14 @@
     font-size: 20px;
     line-height: 30px;
     padding: 10px 21px;
+  }
+}
+
+.customer-contacts__icon {
+  position: absolute;
+  right: 14px;
+
+  @media (min-width: @desktop-width) {
+    right: 18px;
   }
 }

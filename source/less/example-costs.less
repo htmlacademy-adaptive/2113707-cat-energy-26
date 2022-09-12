@@ -7,12 +7,13 @@
 
   @media (min-width: @tablet-width) {
     width: 174px;
+    min-height: 59px;
     justify-content: flex-end;
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 330px;
+    width: 327px;
     justify-content: space-between;
   }
 }
@@ -20,6 +21,7 @@
 .example-costs__description,
 .example-costs__value {
   font-size: 14px;
+  line-height: 20px;
   color: @secondary-text-color;
   text-transform: uppercase;
   margin: 0;
@@ -28,4 +30,14 @@
     font-size: 20px;
     line-height: 20px;
   }
+}
+
+.example-costs__description {
+  @media (min-width: @desktop-width) {
+    padding-left: 2px;
+  }
+}
+
+.example-costs__value {
+  padding-left: 4px;
 }

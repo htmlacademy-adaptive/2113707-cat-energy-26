@@ -1,3 +1,15 @@
+.concept {
+  margin-bottom: 44px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
 .concept__list {
   margin: 0;
   padding: 0;
@@ -15,8 +27,6 @@
 
 .concept__item {
   position: relative;
-  min-height: 60px;
-  padding-top: 3px;
   padding-left: 80px;
   margin: 0 0 20px;
 
@@ -32,18 +42,25 @@
 .concept__item:not(:last-child) {
   margin: 0 0 26px 0;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 77px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-right: 70px;
+    margin-right: 85px;
+    margin-bottom: 66px;
   }
 }
 
 .concept__item:nth-child(odd) {
   @media (min-width: @tablet-width) {
-    margin-right: 153px;
+    margin-right: 143px;
+    margin-bottom: 44px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 70px;
+    margin-right: 85px;
+    margin-bottom: 66px;
   }
 }
 
@@ -51,7 +68,7 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  top: -3px;
   width: 60px;
   height: 60px;
   background-color: @basic-bg-element-color;
@@ -69,13 +86,37 @@
     counter-increment: section;
     content: counter(section) "";
     position: absolute;
-    left: 113px;
-    top: -34px;
+    left: 115px;
+    top: -42px;
     font-size: 280px;
     line-height: 280px;
     color: @background-letters-color;
     z-index: -1;
   }
+}
+
+.concept__item--leaf::before {
+  background-image: url("../img/icon_leaf.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.concept__item--powder::before {
+  background-image: url("../img/icon_powder.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.concept__item--feeding::before {
+  background-image: url("../img/icon_feeding.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.concept__item--clock::before {
+  background-image: url("../img/icon_clock.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .concept__title {
@@ -89,7 +130,8 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 72px;
+    margin-bottom: 74px;
+    padding-top: 15px;
   }
 }
 
@@ -102,5 +144,14 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    width: 245px;
+  }
+}
+
+.concept__br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }

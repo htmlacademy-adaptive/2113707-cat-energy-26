@@ -1,12 +1,23 @@
+.example {
+  @media (min-width: @tablet-width) {
+    border-top: 1px solid rgba(230, 230, 230, 1);
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
+}
+
 .example__wrapper {
   background-color: @basic-background-color;
-  padding-top: 25px;
+  padding-top: 43px;
   padding-bottom: 40px;
   width: 320px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 768px;
+    min-height: 1080px;
     margin: 0 auto;
     background-color: @secondary-background-color;
     padding-bottom: 0;
@@ -14,9 +25,11 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
+    padding-top: 0;
     width: 1440px;
     display: flex;
     flex-wrap: wrap;
+    min-height: 0;
   }
 }
 
@@ -33,7 +46,7 @@
   @media (min-width: @desktop-width) {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 75px;
+    margin-bottom: 0;
     padding: 0;
   }
 }
@@ -43,7 +56,7 @@
   font-size: 36px;
   color: @secondary-text-color;
   margin-top: 0;
-  margin-bottom: 42px;
+  margin-bottom: 52px;
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
@@ -56,6 +69,7 @@
   @media (min-width: @desktop-width) {
     padding: 0 110px;
     width: 100%;
+    margin-bottom: 75px;
   }
 }
 
@@ -77,12 +91,13 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     width: 436px;
+    margin-bottom: 68px;
   }
 }
 
 .example__desktop-screen-wrapper {
   @media (min-width: @desktop-width) {
-    padding: 70px 0 75px 110px;
+    padding: 56px 0 54px 110px;
     background-color: @background-letters-color;
   }
 }
