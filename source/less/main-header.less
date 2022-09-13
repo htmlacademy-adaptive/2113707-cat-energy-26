@@ -2,13 +2,20 @@
   content: "";
   position: absolute;
   left: 0;
-  background-image: url("../img/main-hero-mobile.jpg");
+  background-image:
+    linear-gradient(rgba(@basic-bg-element-color, 0.85), rgba(@basic-bg-element-color, 0.85)),
+    url("../img/index-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: @basic-bg-element-color;
   background-size: cover;
   min-height: 302px;
   width: 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(rgba(@basic-bg-element-color, 0.85), rgba(@basic-bg-element-color, 0.85)),
+      url("../img/index-background-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -25,6 +32,12 @@
       linear-gradient(rgba(@basic-bg-element-color, 0.85), rgba(@basic-bg-element-color, 0.85)),
       url("../img/index-background-desktop.jpg");
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba(@basic-bg-element-color, 0.85), rgba(@basic-bg-element-color, 0.85)),
+        url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
 

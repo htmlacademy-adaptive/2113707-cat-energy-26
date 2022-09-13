@@ -7,10 +7,37 @@
   }
 }
 
-.card__picture-wrapper {
+.card__picture {
   position: absolute;
-  top: -5px;
-  left: 5px;
+  max-width: 100%;
+  bottom: 89px;
+  left: 56px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    height: auto;
+    bottom: 306px;
+    left: 81px;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 44px;
+  }
+}
+
+.card__picture--big {
+  bottom: 79px;
+  left: 48px;
+
+  @media (min-width: @tablet-width) {
+    bottom: 300px;
+    left: 78px;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 41px;
+    bottom: 302px;
+  }
 }
 
 .card__product-wrapper {
