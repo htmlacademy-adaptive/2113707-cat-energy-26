@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- favicons -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-favicon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -17,7 +22,7 @@
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="main-header__logo-image" src="img/logo-mobile.svg" alt="Логотип компании Cat Energy">
+            <img class="main-header__logo-image" src="img/logo-mobile.svg" alt="Логотип компании Cat Energy" width="191" height="39">
           </picture>
         </a>
 
@@ -52,9 +57,9 @@
       <h1 class="main-hero__title">Функциональное питание для котов</h1>
       <div class="main-hero__text">Занялся собой? Займись котом!</div>
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/index-can.png">
-        <source media="(min-width: 768px)" srcset="img/index-can-tablet.png">
-        <img class="main-hero__product" src="img/index-can-mobile.png" alt="Кариный корм для кошек" width="280"
+        <source media="(min-width: 1440px)" srcset="img/index-can.png 1x, img/index-can@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+        <img class="main-hero__product" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" alt="Кариный корм для кошек" width="280"
           height="270">
       </picture>
     </div>
@@ -76,8 +81,13 @@
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету!
               Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
-            <a class="feeding-plan__link" href="catalog.html">Каталог Slim</a>
-            <svg class="feeding-plan__arrow" width="32" height="12" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" stroke-width="2" d="M0 6h26"/><path d="m32 6-6.75 5.2V.8L32 6Z" fill="#000"/></svg>
+            <a class="feeding-plan__link" href="catalog.html">Каталог Slim
+              <svg class="feeding-plan__arrow" width="32" height="12" viewBox="0 0 32 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#000" stroke-width="2" d="M0 6h26" />
+                <path d="m32 6-6.75 5.2V.8L32 6Z" fill="#000" />
+              </svg>
+            </a>
           </li>
           <li class="feeding-plan__item">
             <h3 class="feeding-plan__title feeding-plan__title--pro">Набор массы</h3>
@@ -85,8 +95,13 @@
               Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
-            <a class="feeding-plan__link" href="catalog.html">Каталог Pro</a>
-            <svg class="feeding-plan__arrow" width="32" height="12" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" stroke-width="2" d="M0 6h26"/><path d="m32 6-6.75 5.2V.8L32 6Z" fill="#000"/></svg>
+            <a class="feeding-plan__link" href="catalog.html">Каталог Pro
+              <svg class="feeding-plan__arrow" width="32" height="12" viewBox="0 0 32 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#000" stroke-width="2" d="M0 6h26" />
+                <path d="m32 6-6.75 5.2V.8L32 6Z" fill="#000" />
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
@@ -173,15 +188,21 @@
         <div class="example-slider">
           <div class="example-slider__pictures">
             <picture>
-              <img class="example-slider__before-cat" src="img/viewport=mobile, state=before@1x.png" alt="Кот до похудения"
-                width="280" height="232">
+              <source media="(min-width: 768px)" srcset="img/tablet-before@1x.png 1x, img/tablet-before@2x.png 2x">
+              <img class="example-slider__before-cat" src="img/mobile-before@1x.png" srcset="img/mobile-before@2x.png 2x" alt="Кот до похудения" width="280" height="256">
             </picture>
             <picture>
-              <img class="example-slider__after-cat" src="img/viewport=mobile, state=after@1x.png" alt="Кот после похудения"
-                width="243" height="232">
+              <source media="(min-width: 768px)" srcset="img/tablet-after@1x.png 1x, img/tablet-after@2x.png 2x">
+              <img class="example-slider__after-cat" src="img/mobile-after@1x.png" srcset="img/mobile-after@2x.png 2x" alt="Кот после похудения" width="280" height="256">
             </picture>
           </div>
           <button class="example-slider__controls" type="button">
+            <svg class="example-slider__button" width="40" height="40" viewBox="0 0 40 40" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="38" height="38" rx="19" fill="#fff" />
+              <path d="m16 11-8 9 8 9V11ZM32 20l-8-9v18l8-9Z" fill="#666" />
+              <rect x="1" y="1" width="38" height="38" rx="19" stroke="#666" stroke-width="2" />
+            </svg>
             <span class="visually-hidden">Подергать киску</span>
           </button>
         </div>
@@ -268,7 +289,11 @@
       <div class="main-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z" fill="#666"/></svg>
+          <svg width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z"
+              fill="#666" />
+          </svg>
         </a>
       </div>
 

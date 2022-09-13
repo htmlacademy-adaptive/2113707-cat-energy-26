@@ -88,6 +88,25 @@
   }
 }
 
+.additional-selection__input[type="checkbox"]:checked + .additional-selection__icon--checkbox::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 12px;
+  width: 10px;
+  height: 17px;
+  border-right: 1px solid #68b738;
+  border-bottom: 1px solid #68b738;
+  transform: translateY(-50%) rotate(45deg);
+
+  @media (min-width: @tablet-width) {
+    left: 13px;
+    top: 10px;
+    width: 15px;
+    height: 23px;
+  }
+}
+
 .additional-selection__item:nth-child(even) {
   @media (min-width: @tablet-width) {
     padding-left: 30px;
