@@ -83,6 +83,7 @@
   background-color: transparent;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     left: 260px;
@@ -99,6 +100,8 @@
   top: 6px;
   left: 14px;
   border-radius: 50%;
+  color: #666666;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     top: -4px;
@@ -106,7 +109,7 @@
   }
 }
 
-.example-slider__controls::after {
+.example-slider__controls-line {
   content: "";
   position: absolute;
   top: -101px;
@@ -122,4 +125,17 @@
     left: 18px;
     height: 512px;
   }
+}
+
+.example-slider__controls:hover .example-slider__button {
+  color: rgb(104, 183, 56);
+}
+
+.example-slider__controls:hover .example-slider__controls-line {
+  background-color: rgb(104, 183, 56);
+}
+
+.example-slider__controls:active .example-slider__button,
+.example-slider__controls:active .example-slider__controls-line {
+  opacity: 0.6;
 }
