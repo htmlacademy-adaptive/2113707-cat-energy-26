@@ -18,9 +18,13 @@
   color: @secondary-text-color;
   margin: 0;
   padding: 0;
+  padding-right: 20px;
   margin-bottom: 28px;
+  background-color: #ffffff;
+  max-width: 202px;
 
   @media (min-width: @tablet-width) {
+    max-width: 100%;
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 75px;
@@ -28,6 +32,8 @@
 }
 
 .customer-form__title::before {
+  z-index: -1;
+
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
@@ -52,6 +58,7 @@
   height: 2px;
   width: 99px;
   background-color: @bg-color-gift;
+  z-index: -1;
 
   @media (min-width: @tablet-width) {
     top: 22px;
@@ -73,6 +80,7 @@
   height: 2px;
   width: 158px;
   background-color: @bg-color-gift;
+  z-index: -1;
 
   @media (min-width: @tablet-width) {
     top: 22px;
@@ -94,6 +102,7 @@
   height: 2px;
   width: 136px;
   background-color: @bg-color-gift;
+  z-index: -1;
 
   @media (min-width: @tablet-width) {
     top: 22px;

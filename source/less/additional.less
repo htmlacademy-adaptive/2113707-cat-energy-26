@@ -43,6 +43,8 @@
 }
 
 .additional__title::before {
+  z-index: -1;
+
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
@@ -68,6 +70,7 @@
   height: 2px;
   width: 53px;
   background-color: @bg-color-gift;
+  z-index: -1;
 
   @media (min-width: @tablet-width) {
     top: 38px;

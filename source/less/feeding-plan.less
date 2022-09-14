@@ -199,22 +199,26 @@
   }
 }
 
+.feeding-plan__link:hover .feeding-plan__arrow {
+  transform: scaleX(1.4);
+}
+
+.feeding-plan__link:active .feeding-plan__arrow,
+.feeding-plan__link:active {
+  opacity: 0.3;
+}
+
 .feeding-plan__arrow {
   position: absolute;
   bottom: 26px;
-  left: 112px;
+  left: 120px;
   z-index: 1;
-
-  &:hover {
-    left: 132px;
-  }
+  transform: scaleX(1);
+  transform-origin: center left;
+  transition: transform 0.5s;
 
   @media (min-width: @tablet-width) {
     bottom: 66px;
-    left: 175px;
-
-    &:hover {
-      left: 190px;
-    }
+    left: 180px;
   }
 }
