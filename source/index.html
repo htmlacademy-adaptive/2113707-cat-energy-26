@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <!-- favicons -->
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon-favicon.svg" type="image/svg+xml">
@@ -58,7 +58,8 @@
       <div class="main-hero__text">Занялся собой? Займись котом!</div>
       <picture>
         <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can.webp 1x, img/index-can@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x">
         <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x">
         <source media="(min-width: 1440px)" srcset="img/index-can.png 1x, img/index-can@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
@@ -141,11 +142,12 @@
     <!-- Example -->
 
     <section class="example">
-
-      <div class="example__wrapper">
+      <div class="example__title-wrapper">
         <h2 class="example__title">Живой пример</h2>
+      </div>
+      <div class="example__wrapper">
 
-        <div class="example__desktop-screen-wrapper">
+        <div class="example__content-wrapper">
           <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
             Slim.
             Отличный результат без изнуряющих тренировок!
@@ -189,24 +191,30 @@
         <div class="example-slider">
           <div class="example-slider__pictures">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/tablet-before@1x.webp 1x, img/tablet-before@2x.webp 2x">
+              <source type="image/webp" srcset="img/mobile-before@1x.webp 1x, img/mobile-before@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/tablet-before@1x.png 1x, img/tablet-before@2x.png 2x">
               <img class="example-slider__before-cat" src="img/mobile-before@1x.png"
                 srcset="img/mobile-before@2x.png 2x" alt="Кот до похудения" width="280" height="256">
             </picture>
             <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/tablet-after@1x.webp 1x, img/tablet-after@2x.webp 2x">
+              <source type="image/webp" srcset="img/mobile-after@1x.webp 1x, img/mobile-after@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/tablet-after@1x.png 1x, img/tablet-after@2x.png 2x">
               <img class="example-slider__after-cat" src="img/mobile-after@1x.png" srcset="img/mobile-after@2x.png 2x"
                 alt="Кот после похудения" width="280" height="256">
             </picture>
+            <button class="example-slider__controls" type="button">
+              <svg class="example-slider__button" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <use href="img/sprite.svg#slider-tab"></use>
+              </svg>
+              <span class="example-slider__controls-line"></span>
+              <span class="visually-hidden">Подергать киску</span>
+            </button>
           </div>
-          <button class="example-slider__controls" type="button">
-            <svg class="example-slider__button" width="40" height="40" viewBox="0 0 40 40" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <use href="img/sprite.svg#slider-tab"></use>
-            </svg>
-            <span class="example-slider__controls-line"></span>
-            <span class="visually-hidden">Подергать киску</span>
-          </button>
         </div>
       </div>
     </section>
@@ -238,8 +246,8 @@
   </section>
 
   <!-- footer -->
-  <footer class="main-footer container">
-    <div class="main-footer__wrapper">
+  <footer class="main-footer">
+    <div class="main-footer__wrapper container">
 
       <a class="main-footer__logo" href="index.html">
         <svg width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">

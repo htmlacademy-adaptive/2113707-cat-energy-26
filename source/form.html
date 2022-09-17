@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <!-- favicons -->
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon-favicon.svg" type="image/svg+xml">
@@ -51,7 +51,7 @@
   </header>
   <!-- Main -->
 
-  <main class="main-container main-container--form">
+  <main class="main-container">
     <div class="form-title">
       <h1 class="form-title__heading">Подбор программы</h1>
       <p class="form-title__text">Заполните анкету, и мы подберём программу питания для вашего кота</p>
@@ -125,7 +125,7 @@
             <li class="customer-contacts__item">
               <label class="customer-contacts__label">
                 <span class="customer-contacts__name">E-mail:*</span>
-                <input class="customer-contacts__input" type="text" name="e-mail" value="kuklachev@gmail.com"
+                <input class="customer-contacts__input" type="email" name="e-mail" value="kuklachev@gmail.com"
                   placeholder="kuklachev@gmail.com" required>
                 <svg class="customer-contacts__icon customer-contacts__icon--email" width="19" height="14"
                   viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +136,7 @@
             <li class="customer-contacts__item">
               <label class="customer-contacts__label">
                 <span class="customer-contacts__name customer-contacts__name--phone">Телефон:*</span>
-                <input class="customer-contacts__input" type="text" name="e-mail" value="8 (960) 900-60-90"
+                <input class="customer-contacts__input" type="tel" name="e-mail" value="8 (960) 900-60-90"
                   placeholder="8 (960) 900-60-90" required>
                 <svg class="customer-contacts__icon customer-contacts__icon--phone" width="20" height="20"
                   viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,8 +150,8 @@
         <!-- Order`s comments -->
         <fieldset class="customer-form customer-comments">
           <legend class="customer-form__title customer-form__title--comments">Комментарий</legend>
-          <textarea class="customer-comments__comment" name="customer-comments-comment"
-            placeholder="Раccкажите обо всех повадках кота"></textarea>
+            <textarea class="customer-comments__comment" name="customer-comments-comment"
+              placeholder="Раccкажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <!-- Additional goods -->
@@ -211,8 +211,8 @@
   <section class="contacts">
     <h2 class="visually-hidden">Контакты</h2>
 
-    <div class="contacts__wrapper">
-      <div class="contacts__invitation contacts__invitation--background container">
+    <div class="contacts__wrapper contacts__wrapper--background">
+      <div class="contacts__invitation container">
         <p class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</p>
         <div class="contacts__address">
           <p class="contacts__street">ул. Большая Конюшенная, д. 19/8</p>
@@ -232,8 +232,8 @@
   </section>
 
   <!-- footer -->
-  <footer class="main-footer container">
-    <div class="main-footer__wrapper">
+  <footer class="main-footer">
+    <div class="main-footer__wrapper container">
 
       <a class="main-footer__logo" href="index.html">
         <svg width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,15 @@
 .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 22px;
   min-height: 34px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .copyright__link {
