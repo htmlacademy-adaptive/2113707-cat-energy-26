@@ -142,11 +142,12 @@
     <!-- Example -->
 
     <section class="example">
-
-      <div class="example__wrapper">
+      <div class="example__title-wrapper">
         <h2 class="example__title">Живой пример</h2>
+      </div>
+      <div class="example__wrapper">
 
-        <div class="example__desktop-screen-wrapper">
+        <div class="example__content-wrapper">
           <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
             Slim.
             Отличный результат без изнуряющих тренировок!
@@ -205,15 +206,15 @@
               <img class="example-slider__after-cat" src="img/mobile-after@1x.png" srcset="img/mobile-after@2x.png 2x"
                 alt="Кот после похудения" width="280" height="256">
             </picture>
+            <button class="example-slider__controls" type="button">
+              <svg class="example-slider__button" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <use href="img/sprite.svg#slider-tab"></use>
+              </svg>
+              <span class="example-slider__controls-line"></span>
+              <span class="visually-hidden">Подергать киску</span>
+            </button>
           </div>
-          <button class="example-slider__controls" type="button">
-            <svg class="example-slider__button" width="40" height="40" viewBox="0 0 40 40" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <use href="img/sprite.svg#slider-tab"></use>
-            </svg>
-            <span class="example-slider__controls-line"></span>
-            <span class="visually-hidden">Подергать киску</span>
-          </button>
         </div>
       </div>
     </section>
@@ -245,8 +246,8 @@
   </section>
 
   <!-- footer -->
-  <footer class="main-footer container">
-    <div class="main-footer__wrapper">
+  <footer class="main-footer">
+    <div class="main-footer__wrapper container">
 
       <a class="main-footer__logo" href="index.html">
         <svg width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">

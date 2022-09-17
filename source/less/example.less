@@ -9,27 +9,20 @@
 }
 
 .example__wrapper {
-  background-color: @basic-background-color;
-  padding-top: 43px;
+  background-color: @bg-cat-color;
   padding-bottom: 40px;
-  width: 320px;
-  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
-    min-height: 1080px;
-    margin: 0 auto;
     background-color: @secondary-background-color;
     padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 auto;
+    position: relative;
+    background-color: @background-letters-color;
     padding-top: 0;
-    width: 1440px;
     display: flex;
     flex-wrap: wrap;
-    min-height: 0;
   }
 }
 
@@ -52,24 +45,32 @@
 }
 
 .example__title {
+  width: 320px;
   font-weight: 400;
   font-size: 36px;
   color: @secondary-text-color;
-  margin-top: 0;
-  margin-bottom: 52px;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 35px 20px 51px;
 
   @media (min-width: @tablet-width) {
+    width: 768px;
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 63px;
-    padding-left: 30px;
+    padding: 43px 30px 65px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 1440px;
     padding: 0 110px;
-    width: 100%;
     margin-bottom: 75px;
+  }
+}
+
+.example__title-wrapper {
+  background-color: @bg-cat-color;
+
+  @media (min-width: @tablet-width) {
+    background-color: @secondary-background-color;
   }
 }
 
@@ -77,6 +78,7 @@
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
+  margin-top: 0;
   margin-bottom: 20px;
   padding: 0 20px;
 
@@ -95,9 +97,17 @@
   }
 }
 
-.example__desktop-screen-wrapper {
+.example__content-wrapper {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding: 56px 0 54px 110px;
+    width: 1440px;
+    padding: 71px 0 51px 110px;
     background-color: @background-letters-color;
   }
 }

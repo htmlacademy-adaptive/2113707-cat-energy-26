@@ -3,7 +3,6 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    margin: 0;
     margin-bottom: 66px;
   }
 
@@ -13,106 +12,56 @@
 }
 
 .customer-form__title {
+  position: relative;
   font-size: 24px;
-  line-height: 26px;
+  line-height: 24px;
+  font-weight: 400;
   color: @secondary-text-color;
+  background-color: @secondary-background-color;
   margin: 0;
-  padding: 0;
+  margin-bottom: 32px;
+  margin-left: -20px;
+  padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 28px;
-  background-color: #ffffff;
-  max-width: 202px;
+  display: inline-block;
 
   @media (min-width: @tablet-width) {
-    max-width: 100%;
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 75px;
-  }
-}
-
-.customer-form__title::before {
-  z-index: -1;
-
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: 22px;
-    left: -70px;
-    height: 2px;
-    width: 30px;
-    background-color: @bg-color-gift;
+    margin-left: -39px;
+    padding-left: 39px;
+    padding-right: 42px;
   }
 
   @media (min-width: @desktop-width) {
-    left: -110px;
-    width: 70px;
+    margin-left: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
-.customer-form__title--contacts::after {
+.customer-form__title::after {
   content: "";
   position: absolute;
   top: 16px;
-  left: 221px;
   height: 2px;
-  width: 99px;
+  width: 100vw;
   background-color: @bg-color-gift;
   z-index: -1;
 
   @media (min-width: @tablet-width) {
-    top: 22px;
-    left: 553px;
-    width: 145px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 552px;
-    width: 778px;
+    top: 21px;
+    width: 8888px;
+    left: -4444px;
   }
 }
 
-.customer-form__title--comments::after {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 162px;
-  height: 2px;
-  width: 158px;
-  background-color: @bg-color-gift;
-  z-index: -1;
+.customer-form__title--contacts {
+  max-width: 222px;
 
   @media (min-width: @tablet-width) {
-    top: 22px;
-    left: 220px;
-    width: 478px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 222px;
-    width: 1108px;
-  }
-}
-
-.customer-form__title--additional::after {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 164px;
-  height: 2px;
-  width: 136px;
-  background-color: @bg-color-gift;
-  z-index: -1;
-
-  @media (min-width: @tablet-width) {
-    top: 22px;
-    left: 252px;
-    width: 446px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 251px;
-    width: 1078px;
+    max-width: 100%;
   }
 }
 
@@ -125,7 +74,7 @@
 .customer-form__title--additional {
   position: relative;
 
-  @media (max-width: 767px) {
+  @media (min-width: @tablet-width) {
     margin-bottom: 38px;
   }
 

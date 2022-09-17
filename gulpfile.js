@@ -74,6 +74,9 @@ export const svg = () =>
   gulp.src(['source/img/*.svg', '!source/img/icons/*.svg', '!source/img/sprite.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
+  gulp.src(['source/img/favicons/*.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img/favicons'));
 
 export const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
@@ -132,6 +135,9 @@ const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('build/less/**/*.less', gulp.series(styles));
+  gulp.watch('build/js/script.js', gulp.series(scripts));
+  gulp.watch('build/*.html').on('change', browser.reload);
 }
 
 // Build

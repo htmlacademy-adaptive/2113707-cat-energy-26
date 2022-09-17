@@ -1,4 +1,4 @@
-.customer-contacts {
+.customer-form.customer-contacts {
   border: none;
 
   @media (max-width: 767px) {
@@ -10,7 +10,18 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin: 0 auto;
     margin-bottom: 66px;
+    width: 768px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin-bottom: 50px;
   }
 }
 
